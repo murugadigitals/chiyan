@@ -6,8 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <style>
-        
+        *{
+            font-family: "Open Sans", sans-serif;
+            color: red !important;
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        marquee,h1{
+            /* width: 100%; */
+            display: inline-block;
+            position: absolute;
+            top: 0px;
+            z-index: 100;
+            /* background-color: rgba(224, 255, 255, 0.45); */
+            height: 50vh;
+        }
+        video{
+            z-index: -100;
+        }
     </style>
 </head>
 
@@ -15,20 +36,17 @@
 
     <div class="col-sm-6 text-center my-5 d-flex justify-content-center align-items-center">
         <div style="width:100%;height:70vh;">
-            <video  style="width:100%;height: 70vh;" src="./chiyan.mp4" controls loop muted autoplay></video>
+            <video src="./chiyan.mp4" controls loop muted autoplay></video>
         </div>
-        <div class="position-absolute" >
-            <button class="p-2 border-danger fs-1 btn btn-warning m-1 bg-transparent text-warning" onmouseover="one()" onmouseleave="two()">మామ</button>
-            <marquee behavior="" direction="right"  class="text-danger fs-1 ">Handle with Care</marquee>
-        </div>
+        <marquee behavior="" direction="down"  class="fs-1 m-5 text-white" onmouseover="this.stop()" onmouseout="this.start()">Nine</marquee>
 
         <script>
-            function one() {
-                document.querySelector("button").innerHTML = "nine"
-            }
-            function two() {
-                document.querySelector("button").innerHTML = "మామ"
-            }
+            // function one() {
+            //     document.querySelector("button").innerHTML = "nine"
+            // }
+            // function two() {
+            //     document.querySelector("button").innerHTML = "మామ"
+            // }
 
         </script>
     </div>
